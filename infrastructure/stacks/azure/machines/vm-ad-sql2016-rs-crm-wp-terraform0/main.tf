@@ -59,53 +59,53 @@ resource "azurerm_network_security_group" "main" {
   location            = "${var.location}"
   resource_group_name = "${var.vm_resource_group_name}"
 
-  security_rule {
-    name                       = "RDP"
-    priority                   = 300
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "3389"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  # security_rule {
+  #   name                       = "RDP"
+  #   priority                   = 300
+  #   direction                  = "Inbound"
+  #   access                     = "Allow"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "3389"
+  #   source_address_prefix      = "92.33.160.93" #IP HÄR <-----
+  #   destination_address_prefix = "*"
+  # }
 
-  security_rule {
-    name                       = "WinRM"
-    priority                   = 310
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "5986"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  # security_rule {
+  #   name                       = "WinRM"
+  #   priority                   = 310
+  #   direction                  = "Inbound"
+  #   access                     = "Allow"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "5986"
+  #   source_address_prefix      = "92.33.160.93"
+  #   destination_address_prefix = "*"
+  # }
 
-  security_rule {
-    name                       = "HTTP"
-    priority                   = 315
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "80"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  # security_rule {
+  #   name                       = "HTTP"
+  #   priority                   = 315
+  #   direction                  = "Inbound"
+  #   access                     = "Allow"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "80"
+  #   source_address_prefix      = "92.33.160.93"
+  #   destination_address_prefix = "*"
+  # }
 
-  security_rule {
-    name                       = "HTTPS"
-    priority                   = 320
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "443"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  # security_rule {
+  #   name                       = "HTTPS"
+  #   priority                   = 320
+  #   direction                  = "Inbound"
+  #   access                     = "Allow"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "443"
+  #   source_address_prefix      = "92.33.160.93"
+  #   destination_address_prefix = "*"
+  # }
 
 }
 
